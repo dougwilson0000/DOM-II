@@ -58,6 +58,19 @@ document.addEventListener('keydown', event => {
 
 
 // #9
-
+const imgContent = document.querySelectorAll('img');
+imgContent.forEach(img => {
+    img.addEventListener('mouseenter', event => {
+        event.target.style.border = '3px solid purple';
+    })
+})
 
 // #10
+
+const button = document.querySelectorAll('.btn');
+button.forEach(btn => {
+btn.addEventListener('mousedown', event => {
+    event.target.style.backgroundColor = 'black';
+})
+})
+
