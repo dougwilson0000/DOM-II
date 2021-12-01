@@ -17,7 +17,7 @@ topImage.addEventListener('dblclick', function (event) {
     event.target.style.transform = 'scale(.5)';
 } )
 
-// #3
+//#3
 const links = document.querySelectorAll('nav a');
 links.forEach(link => {
     link.addEventListener('click', function(event) {
@@ -39,12 +39,22 @@ document.addEventListener('copy', event => {
 })
 
 // #6
-
+window.addEventListener('beforeprint', (event) => {
+    console.log('Before print');
+    console.log(event);
+  });
 
 // #7
-
+window.addEventListener('load', (event) => {
+    alert(`${event} page is fully loaded`);
+  });
 
 // #8
+document.addEventListener('keydown', event => {
+    if(event.key === 'Escape'){
+    alert(`${event.code} Was pressed, Proceed with Caution`)
+    }
+});
 
 
 // #9
